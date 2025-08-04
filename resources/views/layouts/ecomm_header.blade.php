@@ -1,4 +1,4 @@
-<header class="bg-white w-[1507px]">
+<div class="bg-white" style="width:100%">
     <nav class="flex items-center justify-between h-[66px] mx-10">
         <div class="">
            <a href="{{route('dashboard')}}"> <img class="cursor-pointe rounded-full" src="../img/logo.svg" alt="..."></a> 
@@ -40,11 +40,11 @@
                 </x-slot>
             </x-dropdown> 
             <div class="p-1 mx-2">Cart</div>
-            <div class="p-1">Become a seller</div>
+            <div class="p-1"><a href="{{ url('admin/login') }}">Become a seller</a></div>
         </div>
     </nav>
-</header>
-    <div class="w-[1507px]">
+</div>
+    <div class="">
         <div class="h-[125px]  bg-white mx-4 my-4">
             <div class="flex justify-between items-center p-2 mx-24">
                 <div class="font-semibold text-l text-center"><img src="../img/img-1.webp" alt="" srcset="">Top Offers</div>

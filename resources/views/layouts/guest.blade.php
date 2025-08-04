@@ -17,12 +17,12 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="bg-[#F1F2F4]">
-    <header class="bg-white" >
+    <header class="bg-white w-full" >
         <nav class="flex justify-between items-center w-[98%] h-[66px] mx-auto">
             <div class="basis-1/10">
                 <img class="cursor-pointe rounded-full" src="../img/logo.svg" alt="...">
             </div>
-            <div class=" basis-1/2">
+            <div class=" basis-1/2 w-full">
                 <input type="text" placeholder="Search for Products, Brands and more" class="rounded-xl w-full h-[40px] bg-[#F0F5FF]">
             </div>
             <div class="basis-1/4 flex flex-row justify-between items-center mx-5">
@@ -33,7 +33,7 @@
                     <div> Login</div>
                 </div>
                 </a>
-                <div>Become a Seller</div>
+                <div><a href="{{ url('admin/login') }}">Become a Seller</a></div>
             </div>
         </nav>
     </header>

@@ -1,12 +1,19 @@
-@extends('layouts/guest')
-@section('login')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    @vite(['resources/css/app.css','resources/js/app.js']);
+</head>
+<body>
 <div class="h-auto w-auto snap-x">
     <div class="flex flex-row h-[525px] items-center w-[841px] gap-5 bg-white snap-center mx-80">
         <div class="bg-[#2874F0] h-[520px]">
             <img src="../img/login.png" alt="" class=" mt-36 justify-center">
         </div>
         <div class="items-center justify-center p-12 mt-12">
-            <form method="POST" class="" action="{{ route('login') }}">
+            <form method="" class="" action="">
                 @csrf
 
                 <!-- Email Address -->
@@ -43,32 +50,14 @@
                         </a>
                     @endif
 
-                    <x-primary-button class="ms-3 bg-[#2874F0] hover:bg-[#2874F0] focus:ring-[#2874F0]">
+                    <x-primary-button class="ms-3">
                         {{ __('Log in') }}
                     </x-primary-button>
                 </div>
             </form>
-           
-            <div class="row justify-content-center">
-                 <span class="text-center text-gray-500 font-semibold mt-4 block">
-                            OR
-            </span>
-        <div class="col-md-4 text-center">
-            @if(session('error'))
-                <div class="alert alert-danger">{{ session('error') }}</div>
-            @endif
-            <a href="{{ url('/auth/google') }}" class="text-white bg-[#e34033] hover:bg-[#2874F0] flex items-center justify-center border border-gray-300 rounded-md px-4 py-2 mt-4hover:bg-[#2874F0] focus:ring-[#2874F0] focus:outline-none focus:ring-2 focus:ring-offset-2">
-                <i class="bi bi-google"></i> Login with Google
-            </a>
-        </div>
-    </div>
-            
             <div class="mt-20 p-10 opacity-70 font-semibold text-blue-700">New to Flipkart? <a href="{{ route('register') }}">Creat an Account</a></div>
-        
-        
         </div>
-        
     </div>
 </div>
-@endsection 
-
+</body>
+</html>

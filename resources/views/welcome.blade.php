@@ -33,7 +33,7 @@
                     <div> Login</div>
                 </div>
                 </a>
-                <div>Become a Seller</div>
+                <div><a href="{{ url('admin/login') }}">Become a Seller</a></div>
             </div>
         </nav>
     </header>
